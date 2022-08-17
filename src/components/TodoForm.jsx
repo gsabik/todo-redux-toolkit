@@ -74,7 +74,10 @@ const TodoForm = () => {
                             type="text"
                             value={todo.description}
                         ></textarea>
-                        <button className="rounded-md bg-violet-600 py-2">Save</button>
+                        <button 
+                            className="rounded-md bg-violet-600 py-2"
+                            disabled={todo.title.length === 0 || todo.description.length === 0}
+                        >Save</button>
                     </div>
                 </form>
                 {
